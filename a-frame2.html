@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+        
+        <a-sky color="cornflowerblue"></a-sky>
+        <a-plane 
+        position="0 0 0" 
+        rotation="-90 0 0" 
+        width="100" 
+        height="100" 
+        color="green">
+        </a-plane>
+
+        <a-cone 
+        color="blue" 
+        radius-bottom="2" 
+        radius-top="0" 
+        height="5" 
+        position="0 1 -10">
+        <a-animation
+        attribute="color"
+        from="lightblue"
+        to="pink"
+        dur="2000"
+        repeat="true">
+        </a-animation>
+        </a-cone>
+        
+        <a-sphere 
+        position="0 4.5 -10" 
+        radius="1" 
+        src="https://codehs.com/uploads/9f921ac99c453f48640cfcdc4e163350">
+        </a-sphere>
+        
+        <a-box 
+        position="1 2.5 -10" 
+        depth="0.5" 
+        height="2" 
+        width="0.5" 
+        color="orange"
+        rotation="45">
+        <a-animation
+        attribute="position"
+        from="1 2.5 -10"
+        to="0.5 2.5 -10"
+        dur="1000"
+        repeat="true">
+      </a-animation>
+        </a-box>
+        
+        <a-box 
+        position="-1 2.5 -10" 
+        depth="0.5" 
+        height="2" 
+        width="0.5" 
+        color="orange"
+        rotation="45">
+        <a-animation
+        attribute="position"
+        from="-1 2.5 -10"
+        to="-0.5 2.5 -10"
+        dur="1000"
+        repeat="true">
+      </a-animation>
+        </a-box>
+        
+        <a-sphere 
+        position="3 7 -10" 
+        radius="0.5" 
+        color="lightblue">
+        <a-animation
+        attribute="color"
+        from="blue"
+        to="lightblue"
+        dur="2000"
+        repeat="true">
+        </a-animation>
+        </a-sphere>
+        
+        <a-sphere 
+        position="-3 7 -10" 
+        radius="0.5" 
+        color="pink">
+        <a-animation
+        attribute="color"
+        from="red"
+        to="lightpink"
+        dur="2000"
+        repeat="true">
+        </a-animation>
+        </a-sphere>
+        
+        <a-sphere 
+        position="-4 2 -10" 
+        radius="0.5" 
+        color="pink">
+        <a-animation
+        attribute="color"
+        from="blue"
+        to="lightblue"
+        dur="2000"
+        repeat="true">
+        </a-animation>
+        </a-sphere>
+        
+        <a-sphere 
+        position="4 2 -10" 
+        radius="0.5" 
+        color="pink">
+        <a-animation
+        attribute="color"
+        from="red"
+        to="lightpink"
+        dur="2000"
+        repeat="true">
+        </a-animation>
+        </a-sphere>
+
+        <a-sphere 
+        position="6 4.5 -10" 
+        radius="0.5" 
+        color="pink">
+        <a-animation
+        attribute="color"
+        from="purple"
+        to="lightblue"
+        dur="2000"
+        repeat="true">
+        </a-animation>
+        </a-sphere>
+        
+        <a-sphere 
+        position="-6 4.5 -10" 
+        radius="0.5" 
+        color="pink">
+        <a-animation
+        attribute="color"
+        from="purple"
+        to="lightblue"
+        dur="2000"
+        repeat="true">
+        </a-animation>
+        </a-sphere>        
+        
+        </a-scene>
+    </body>
+</html>
