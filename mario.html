@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="mario.css" rel="stylesheet" type="text/css" />
+  </head>
+  <html>
+<head>
+
+<html>
+<head>
+<title>Mario</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/ec071a764d83f34910ba21fab0b0f0cc20293542/chs-js-lib/chs.js"></script>
+
+
+
+
+</head>
+
+<body>
+<h1>Mario</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    function start (){
+    
+    while (true){
+   var height = readInt("Height: ");
+   if (height>0 && height<=13){
+       break;}
+ 
+    }
+   for (var rows = 0; rows < height; rows++)
+   {
+       for (var spaces = height- rows-1; spaces>=1; spaces--){
+          print(" ");
+          }
+       
+        for (var hashes = 0; hashes<=rows + 1; hashes++)
+       {
+           print("#");}
+           println(" ");
+           
+           
+   
+   }
+   
+       
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
