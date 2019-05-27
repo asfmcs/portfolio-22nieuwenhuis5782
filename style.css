@@ -1,0 +1,41 @@
+h1 {
+  font-family: 'Lucida Grande', Arial, sans-serif;
+  color: darkcyan;
+  }
+
+h3 {
+  font-family: 'Lucida Grande', Arial, sans-serif;
+  color: cadetblue;
+  }
+
+  h2 {
+  font-family: 'Lucida Grande', Arial, sans-serif;
+  color: cadetblue;
+  }
+
+p {
+  font-family: 'Lucida Grande', Arial, sans-serif;
+  color:  darkcyan;
+  background-color: lightcyan;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  }
+
+  div {
+   background-color: lightcyan;
+   padding-top: 30px;
+   padding-right: 30px;
+   padding-bottom: 30px;
+   padding-left: 30px;
+  }
+
+body {
+  padding-top: 40px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  position: static;
+  border: 2px solid  teal;
+}

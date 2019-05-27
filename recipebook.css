@@ -1,0 +1,54 @@
+  h1 {
+  color: rgb(255, 53, 73);
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+  h3 {
+  color: rgb(71, 0, 17);
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+  h2 {
+  color: rgb(255, 2, 65);
+  ffont-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+  h4 {
+  color: rgb(188, 43, 53);
+  ffont-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+  h5 {
+  color: rgb(188, 43, 53);
+  ffont-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+  body {
+    color: rgb(71, 0, 17);
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+  table {
+  border-collapse: collapse;}
+
+  table, th, td {
+  border: 2px solid rgb(82, 21, 26);
+  }
+
+  table {
+  width: 40%;}
+
+  th {
+  height: 50px;}
+
+body {
+  background-image: linear-gradient(rgb(255, 234, 234), rgb(255, 188, 188));
+}
+
+h1 {
+  background-color: rgb(255, 244, 245);
+  text-align: center;
+  padding: 20px;
+}
+
+th {
+  background-color: rgb(255, 247, 248)
+}
+
+h1 {
+  text-shadow: 2px 2px 5px  white;
+}

@@ -1,0 +1,33 @@
+
+      h1 {
+        color: rgb(6, 124, 153);
+        font-family: "Georgia", Times, serif;
+        background-color: aliceblue;
+      }
+      
+      h2 {
+        color: rgb(18, 185, 226);
+        font-family: "Georgia", Times, serif;
+        background-color: aliceblue;
+      }
+
+      p {
+        text-align:center;
+        font-family: "Georgia", Times, serif;
+        background-color: aliceblue;
+      } 
+
+      figure {
+        color: darkblue
+      }
+
+      ol {
+        background-color: aliceblue;
+        font-family: "Georgia", Times, serif;
+      }
+
+      #list {
+        color: midnightblue
+      }
+    
+

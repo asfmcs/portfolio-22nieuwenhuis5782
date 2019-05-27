@@ -1,0 +1,15 @@
+h1 {
+  color: rgb(119, 13, 16);
+  font-family: 'Trebuchet MS', Arial, sans-serif
+}
+
+h2 {
+  color: rgb(219, 59, 63);
+  font-family: 'Trebuchet MS', Arial, sans-serif
+}
+p {
+  color: rgb(255, 30, 36);
+  font-family: 'Trebuchet MS', Arial, sans-serif
+}
+
+background { color: gainsboro}
