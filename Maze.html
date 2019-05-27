@@ -1,0 +1,257 @@
+<html>
+<head>
+<title>Maze</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/ec071a764d83f34910ba21fab0b0f0cc20293542/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Maze</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    //body
+var headradius = 17.5;
+var bodywidth = headradius *2;
+var bodyheight = 30;
+//eyes
+var eyeradius = 5;
+var eyeoffset = 7;
+var pupilleftoffset = 4;
+var pupilrightoffset = 10;
+var pupilheightoffset = 1.5;
+var pupilradius = 2;
+//feet
+var footradius = 6.25;
+//pacman
+var pacmanradius = 40;
+var yellowballradius = 5;
+var eyeradius = 4;	
+var centerX = getWidth() / 2;
+var centerY = getHeight() / 2;
+//background
+var backgroundwidth = 500;
+var backgroundheight = 500;
+
+
+function start(){
+   var background = new Rectangle (backgroundwidth, backgroundheight);
+    background.setPosition(0, 0);
+    background.setColor(Color.BLACK);
+    add(background);
+
+	var text = new Text("READY?!");
+	text.setFont("30pt Calibri");
+	text.setColor(Color.white);
+	text.setPosition(125,300);
+	add(text);
+    
+    var rect = new Rectangle(100, 4);
+	rect.setPosition(10, 10);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(100, 4);
+	rect.setPosition(120, 10);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(100, 4);
+	rect.setPosition(240, 10);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(100, 4);
+	rect.setPosition(360, 10);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	    var rect = new Rectangle(100, 4);
+	rect.setPosition(10, 460);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(100, 4);
+	rect.setPosition(120, 460);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(100, 4);
+	rect.setPosition(240, 460);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(100, 4);
+	rect.setPosition(360, 460);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(4, 100);
+	rect.setPosition(10, 20);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(4, 100);
+	rect.setPosition(10, 140);
+	rect.setColor(Color.BLUE);
+	add(rect);
+    
+    var rect = new Rectangle(4, 100);
+	rect.setPosition(10, 260);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(4, 100);
+	rect.setPosition(10, 380);
+	rect.setColor(Color.BLUE);
+	add(rect);
+		var rect = new Rectangle(4, 100);
+	rect.setPosition(385, 20);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(4, 100);
+	rect.setPosition(385, 140);
+	rect.setColor(Color.BLUE);
+	add(rect);
+    
+    var rect = new Rectangle(4, 100);
+	rect.setPosition(385, 260);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+	var rect = new Rectangle(4, 100);
+	rect.setPosition(385, 380);
+	rect.setColor(Color.BLUE);
+	add(rect);
+	
+    drawPacman(centerX, centerY, Color.yellow);
+    drawGhost(255,200, Color.red);
+    drawGhost(105,200, Color.cyan);
+    drawGhost(155,200, Color.purple);
+    drawGhost(205,200, Color.orange);
+
+    
+function drawGhost(centerX, centerY, color){
+   var headcircle = new Circle (headradius);
+    headcircle.setPosition( centerX, centerY );
+    headcircle.setColor(color);
+    add( headcircle );
+
+    var body = new Rectangle (bodywidth, bodyheight);
+    body.setPosition(centerX - bodywidth / 2, centerY);
+    body.setColor(color);
+    add(body);
+    
+    var eyes = new Circle (eyeradius);
+    eyes.setPosition (centerX + eyeoffset, centerY);
+    eyes.setColor(Color.WHITE);
+    add(eyes);
+  
+    var eyes = new Circle (eyeradius);
+    eyes.setPosition (centerX - eyeoffset, centerY);
+    eyes.setColor(Color.WHITE);
+    add(eyes);
+    
+    var pupils = new Circle (pupilradius);
+    pupils.setPosition (centerX + pupilleftoffset, centerY );
+    pupils.setColor(Color.BLUE);
+    add(pupils);
+  
+    var pupils = new Circle (pupilradius);
+    pupils.setPosition (centerX - pupilleftoffset - 6, centerY);
+    pupils.setColor(Color.BLUE);
+    add(pupils);
+
+    var foot = new Circle(footradius);
+    foot.setPosition(centerX, centerY + bodyheight);
+    foot.setColor(color);
+    add(foot);
+
+    var foot = new Circle(footradius);
+    foot.setPosition(centerX + 11, centerY + bodyheight);
+    foot.setColor(color);
+    add(foot);
+  
+      var foot = new Circle(footradius);
+    foot.setPosition( centerX - 11, centerY + bodyheight);
+    foot.setColor(color);
+    add(foot);
+  
+    }
+
+function drawPacman(centerX, centerY, color){
+	var pacman = new Circle(pacmanradius);
+	pacman.setPosition(110, 110);
+	pacman.setColor (Color.YELLOW);
+	add(pacman);
+	
+    var arc = new Arc(55, 0, 45, 0);
+    arc.setPosition(110, 110);
+    arc.setColor(Color.BLACK);
+    arc.setRotation(25);  
+    add(arc);
+
+	var eye = new Circle(eyeradius);
+	eye.setPosition(120, 90);
+	eye.setColor (Color.BLACK);
+	add(eye);
+	
+	var ball = new Circle(yellowballradius);
+
+	ball.setPosition(160, 110);
+	ball.setColor (Color.YELLOW);
+	add(ball);
+	
+	var ball = new Circle(yellowballradius);
+	ball.setPosition(200, 110);
+	ball.setColor (Color.YELLOW);
+	add(ball);
+	
+	var ball = new Circle(yellowballradius);
+	ball.setPosition(240, 110);
+	ball.setColor (Color.YELLOW);
+	add(ball);
+}
+    
+    
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
